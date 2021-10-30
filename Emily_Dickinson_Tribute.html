@@ -16,6 +16,13 @@
             padding: 0px;
 }
 
+#titles {
+            text-align: center;
+            position: relative;
+            font-family: 'Cabin', sans-serif;
+            text-shadow: 3px 3px rgb(1, 8, 70);
+            font-size: 50px;
+        }
 
 .parallax-1 {
             width: 100%;
@@ -25,7 +32,6 @@
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-
         }
 
         @media screen and (max-width: 768px) {
@@ -34,7 +40,7 @@
 	}
 }
 
-        .parallax-1 h1 {
+        h1 {
             margin: auto;
             color: white;
             text-align: center;
@@ -46,11 +52,20 @@
             transform: translate(-50%, -50%);
             font-family: 'Cabin', sans-serif;
             text-shadow: 3px 3px black;
+           
+        }
+
+        .funfact {
+            text-align: center;
+            position: relative;
+            font-family: 'Cabin', sans-serif;
+            text-shadow: 3px 3px rgb(1, 8, 70);
+            font-size: 45px;
         }
 
         .heading2 {
             padding: 30px;
-            background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
+            background: linear-gradient(rgb(83, 200, 244) 3.8%, rgb(162, 79, 206) 91.1%);
             color: white;
             font-size: 17px;
             text-align: center;
@@ -71,12 +86,14 @@
             padding: 80px;
             font-size: 25px;
             line-height: 1;
+            font-weight: 600;
         }
 
         .life {
-            padding: 80px;
+            padding: 40px;
             font-size: 25px;
-            line-height: 2;
+            line-height: 1.5;
+            font-weight: 600;
         }
 
         .quote {
@@ -90,27 +107,75 @@
 .quote figcaption,
 .quote blockquote {
   margin: 1em;
+  line-height: 1.5;
+  font-weight: 600;
 }
+
+.parallax-3 {
+            width: 100%;
+            height: 100%;
+            background: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Daguerrotype_of_Susan_Dickinson_with_Frame.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        @media screen and (min-width: 600px) {
+  .life {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .life {
+    font-size: 18px;
+  }
+}
+
+
+.susan {
+            padding: 10px;
+            font-size: 25px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        @media screen and (min-width: 600px) {
+  .susan {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .susan {
+    font-size: 18px;
+  }
+}
+
+
 
 </style>
 
 <!-- HTML -->
 <body>
     <div class="parallax-1">
-<h1 >
+<h1 style="font-size: 50px;">
     Emily Dickinson
 </h1>
 </div>
 
 <div class="heading2">
-    <h2> About </h2>
+    <h2 id="titles"> About </h2>
 
-    <p class="life"> Emily Dickinson was born on 10th Decemember 1830 in Amherst, U.S. <br>
-        She died on 15th May 1886 in Amherst. <br> 
-        Her sister Lavinia found her books of poetry and began the process of making the poetry public. <br>
-        The first collection entitled Poems by Emily Dickinson was published in 1890 and was met with praise. <br>
-        Opinions regarding the poet's talents were mixed in the twentieth century, <br>
-        but <br>
+    <p class="life"> Emily Dickinson was born on 10th Decemember 1830 in Amherst, U.S.
+        She died on 15th May 1886 in Amherst. 
+        Her sister Lavinia found her books of poetry and began the process of making the poetry public.
+        </p>
+        <p class="life">  The first collection entitled Poems by Emily Dickinson was published in 1890 and was met with praise. 
+        Opinions regarding the poet's talents were mixed in the twentieth century, 
+        but 
         she is now one of the most important icons in American Poetry despite being unrecognised during her time. </p>
         <figure class="quote">
             <blockquote>
@@ -132,27 +197,60 @@
 </div>
 
 <div class="heading2">
-    <p class="life"> Most of her work as a poet was hidden from her family and the surrounding community until after her death in 1886. <br>
-         Only ten poems out of the 1800 she wrote were published during her lifetime. <br> 
-         The majority of the writing Dickinson completed in the next decade was included in letters. <br>
-         Her most popular correspondents were her brother Austin, and a collection of female friends including her future sister in law Susan Gilbert. <br>
-         In 1858, Dickinson began to organize her massive volumes of poetry into manuscript-books. <br>
-         Over the course of seven years she compiled about 800 poems into neat bundles. <br>
-         Her intent with this collection is unknown, but it seems likely she was readying her work to be published posthumously.<br> </p>
+    <p class="life"> Most of her work as a poet was hidden from her family and the surrounding community until after her death in 1886. 
+         Only ten poems out of the 1800 she wrote were published during her lifetime. 
+         The majority of the writing Dickinson completed in the next decade was included in letters. </p>
+         <p class="life"> 
+         Her most popular correspondents were her brother Austin, and a collection of female friends including her sister-in-law Susan Gilbert. 
+         In 1858, Dickinson began to organize her massive volumes of poetry into manuscript-books. 
+         Over the course of seven years she compiled about 800 poems into neat bundles. 
+         Her intent with this collection is unknown, but it seems likely she was readying her work to be published posthumously. </p>
          
-         <p class="life"> During the 1850s, Dickinson's strongest and most affectionate relationship was with her sister-in-law, Susan Gilbert. <br>
-         Dickinson eventually sent her over three hundred letters, more than to any other correspondent, over the course of their relationship. <br>
-         Susan was supportive of the poet, playing the role of "most beloved friend, influence, muse, and adviser" whose editorial suggestions Dickinson sometimes followed.<br>
+         <p class="life"> During the 1850s, Dickinson's strongest and most affectionate relationship was with her sister-in-law, Susan Gilbert. 
+         Dickinson eventually sent her over three hundred letters, more than to any other correspondent, over the course of their relationship. 
+         Susan was supportive of the poet, playing the role of "most beloved friend, influence, muse, and adviser" whose editorial suggestions Dickinson sometimes followed.
         In an 1882 letter to Susan, Dickinson said, "With the exception of Shakespeare, you have told me of more knowledge than any one living." <cite><a href="https://en.wikipedia.org/wiki/Emily_Dickinson">(Emily Dickinson)</a></cite><br> </p>
 
 
-         <p class="life"> On one such social gathering Dickinson met Springfield Republican editor and publisher Samuel Bowles. <br>
-             Bowles was impressed by Dickinson's poetry, and published seven poems during her lifetime. <br>
-             Dickinson did not give consent for her work to be included, <br>
-             but more of her poems appeared in the Springfield Republican during her lifetime than in any other publication.<br>
+         <p class="life"> On one such social gathering Dickinson met Springfield Republican editor and publisher Samuel Bowles. 
+             Bowles was impressed by Dickinson's poetry, and published seven poems during her lifetime. 
+             Dickinson did not give consent for her work to be included, 
+             but more of her poems appeared in the Springfield Republican during her lifetime than in any other publication.
          <cite><a href="https://www.emilydickinson.net/biography.jsp">(Biography of Emily Dickinson)</a></cite>  </p>
 
 </div>
 
 
+<div class="parallax-3">
+    <h1 style="font-size: 40px;">
+        Susan Gilbert Dickinson
+    </h1>
+    </div>
+
+
+    <div class="heading2">
+    <h2 class="funfact"> Fun Fact </h2>
+    <p class= "life"> 
+To most ordinary people, Susan Gilbert was known to be the wife of Austin Dickinson, who was Emily Dickinson's brother. 
+However, there has been evidence that Emily Dickinson's first love and probably her greatest love was Susan Gilbert. </p>
+
+<p class= "susan"> "The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced an intense, intimate correspondence that would evolve and permute but would last a life- time. “We are the only poets,” Emily told Susan, “and everyone else is prose."  <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/">(Emily Dickinson’s Electric Love Letters to Susan Gilbert)</a></cite>
+<figure class="quote">
+    <blockquote>
+        Will you be kind to me, Susie? I am naughty and cross, this morning, and nobody loves me here; nor would you love me, if you should see me frown, and hear how loud the door bangs whenever I go through; and yet it isn’t anger — 
+        I don’t believe it is, for when nobody sees, I brush away big tears with the corner of my apron, and then go working on — bitter tears, Susie — so hot that they burn my cheeks, and almost scorch my eyeballs, but you have wept much, and you know they are less of anger than sorrow. <br>
+
+        And I do love to run fast — and hide away from them all; here in dear Susie’s bosom, 
+        I know is love and rest, and I never would go away, did not the big world call me, and beat me for not working… <br>
+        Your precious letter, Susie, 
+        it sits here now, and smiles so kindly at me, and gives me such sweet thoughts of the dear writer. When you come home, darling, 
+        I shan’t have your letters, shall I, but I shall have yourself, which is more — Oh more, and better, than I can even think! I sit here with my little whip, 
+        cracking the time away, till not an hour is left of it — then you are here! And Joy is here — joy now and forevermore!</blockquote>
+        <figcaption>
+            &mdash; Emily Dickinson </figcaption>
+            </figure>
+
+
+    </p>
+</div>
 </body>
