@@ -1,5 +1,5 @@
 <h1 align="center">
-<a href="Emily_Dickinson_Tribute.html">
+<a href="emily_dickinson_tribute.html">
 Tribute Page </a> </h1>
 
 ## Why did I choose Emily Dickinson?
