@@ -1,6 +1,4 @@
-<h1 align="center">
-<a href="emily_dickinson_tribute.html">
-Tribute Page </a> </h1>
+# Tribute Page
 
 ## Why did I choose Emily Dickinson?
 
@@ -22,5 +20,7 @@ HTML and CSS taught me the very basic building blocks of the web. Parallax scoll
 
 
 
+## Link to Emily Dickinson Tribute Page!
 
+Click the <a href="emily_dickinson_tribute.html" target=_blank> Emily Dickinson Tribute </a> to direct you to the page or alternatively, https://schoolofcode.github.io/w0d0_precourse-challenge-mirellacodes/emily_dickinson_tribute.html 
 
