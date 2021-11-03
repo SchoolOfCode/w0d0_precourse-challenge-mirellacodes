@@ -2,7 +2,7 @@
 
 ## Why did I choose Emily Dickinson?
 
-Emily Dickinson had one of the most unique and interesting ways of writing her poems. She had a special ability that allows to her to describe abstracts concepts with concrete pictures.  One of my favourite poems is 
+Emily Dickinson had one of the most unique and interesting ways of writing her poems. She had a special ability that allows to her to describe abstracts concepts with concrete pictures.  One of my favourite poems from Emily is 
 
 > If I can stop one heart from breaking,
 I shall not live in vain;
