@@ -86,21 +86,21 @@
             font-size: 20px;
             line-height: 1.5;
             font-weight: 600;
-            margin-left: 20%;
-            margin-right: 20%;
             font-family: 'Lato', sans-serif;
-            
-            
+            width: 625px;
+            margin: auto;
+            text-align: left;
         }
 
         .susan {
-            padding: 50px;
+            padding: 30px;
             font-size: 20px;
             line-height: 1.5;
             font-weight: 600;
-            margin-left: 20%;
-            margin-right: 20%;
             font-family: 'Lato', sans-serif;
+            width: 625px;
+            margin: auto;
+            text-align: left;
         }
 
 
@@ -111,17 +111,25 @@
   border-radius: 1em; 
 }
 
-       .quote figcaption,
-        .quote blockquote {
+.quote blockquote {
   margin: 6em 1em 6em 1em;
   line-height: 2;
   color: rgb(255, 255, 255);
   font-family:'Roboto Mono', monospace;
   font-weight: 900;
   font-size: 18px;
+  text-align: left;
   
- 
+           
 } 
+
+.quote figcaption {
+  color: rgb(255, 255, 255);
+  font-family:'Roboto Mono', monospace;
+  font-weight: 900;
+  font-size: 18px;
+  text-align: center;
+}
 
 cite {
     font-size: 15px;
@@ -141,11 +149,11 @@ cite {
         
 
         #Information {
-            padding: 30px;
+            padding: 15px;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: black;
-            font-size: 18px;
-            flex: 20%;
+            font-size: 20px;
+           
         }
 
 
@@ -154,7 +162,6 @@ cite {
   border: none;
   color: white;
   padding: 5px 7px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
@@ -177,26 +184,53 @@ cite {
   color: white;
 }
 
+/* YouTube */
+* {
+  box-sizing: border-box;
+}
+
+.you {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.wrapped-iframe {
+  width: 560px;
+  height: 315px;
+  object-fit: cover;
+  padding: 1%;
+}
+
+/*Footer */
 
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 600px) {
+  .wrapped-iframe {
+    width: 315px;
+  height: 180px;
+  object-fit: cover;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
   .life {
     font-size: 18px;
-    margin-left: 0;
-    margin-right: 0;
+    width: 280px;
+    margin: auto;
   }
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .susan {
     font-size: 18px;
-    margin-left: 0;
-    margin-right: 0;
+    width: 280px;
+    margin: auto;
   }
 }
-
-
 
 
 
@@ -259,7 +293,8 @@ cite {
               but more of her poems appeared in the Springfield Republican during her lifetime than in any other publication
           <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank">(Biography of Emily Dickinson)</a></cite>.  </p>
 
-        <figure class="quote">
+          <!-- Quote -->
+          <figure class="quote">
             <blockquote>
                 Do I repine, is it all murmuring, or am I sad and lone, and cannot, 
                 cannot help it? Sometimes when I do feel so, 
@@ -288,8 +323,11 @@ cite {
 To most ordinary people, Susan Gilbert was known to be the wife of Austin Dickinson, who was Emily Dickinson's brother. 
 However, there has been evidence that Emily Dickinson's first love and probably her greatest love was Susan Gilbert. </p>
 
-<p class= "susan"> "The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced an intense, intimate correspondence that would evolve and permute but would last a life- time. “We are the only poets,” Emily told Susan, “and everyone else is prose."  <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/" target="_blank">(Emily Dickinson’s Electric Love Letters to Susan Gilbert)</a></cite>
-<figure class="quote">
+<p class= "susan">"The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced an intense, intimate correspondence that would evolve and permute but would last a life- time. 
+  “We are the only poets,” Emily told Susan, “and everyone else is prose."   <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/" target="_blank">(Emily Dickinson’s Electric Love Letters to Susan Gilbert)</a></cite> </p>
+
+ <!-- Quote -->
+  <figure class="quote">
     <blockquote>
         Will you be kind to me, Susie? I am naughty and cross, this morning, and nobody loves me here; nor would you love me, if you should see me frown, and hear how loud the door bangs whenever I go through; and yet it isn’t anger — 
         I don’t believe it is, for when nobody sees, I brush away big tears with the corner of my apron, and then go working on — bitter tears, Susie — so hot that they burn my cheeks, and almost scorch my eyeballs, but you have wept much, and you know they are less of anger than sorrow. <br>
@@ -309,14 +347,22 @@ However, there has been evidence that Emily Dickinson's first love and probably 
 
 
     </p>
-</div>
 
+    <!--YouTube -->
+  <div class="you">
+   <iframe class="wrapped-iframe" src="https://www.youtube-nocookie.com/embed/R4WwhOdk_Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+ 
+ <iframe class="wrapped-iframe"  src="https://www.youtube.com/embed/iBMeB6xG4rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+ <iframe class="wrapped-iframe" src="https://www.youtube.com/embed/55kqNg88JqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
 <div id="Information" >
-    <form action="https://www.poetryfoundation.org/poets/emily-dickinson" target="_blank">   Click <button class="button button1" type="submit" >Learn More</button> if you want to know more about Emily Dickinson </form>
+    <form action="https://www.edickinson.org" target="_blank">   Click <button class="button button1" type="submit" >Learn More</button> if you want to know more about Emily Dickinson </form>
 </div>
+
 </body>
+</html>
 
-<footer>
-
-  
-</footer>
