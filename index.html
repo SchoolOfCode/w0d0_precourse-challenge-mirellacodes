@@ -1,0 +1,352 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Emily Dickinson</title>
+
+   <!-- CSS -->
+
+<style>
+
+* {
+            margin: 0px;
+            padding: 0px;
+            
+}
+
+#titles {
+            text-align: center;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+           font-weight: 900;
+            font-size: 50px;
+            text-shadow: rgb(124, 130, 185) 4px 4px;
+        }
+
+
+.parallax-1 {
+            width: 100%;
+            height: 100%;
+            background: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_2380,w_4240,x_0,y_528/v1572879978/shape/mentalfloss/606563-flickr-8654989359_72f1559d26_6k.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 768px) {
+	.parallax-1 {
+		background-attachment: inherit;
+	}
+}
+
+        h1 {
+            margin: auto;
+            color: white;
+            text-align: center;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Lato', sans-serif;
+            text-shadow: 3px 3px black;
+           
+        }
+
+        .funfact {
+            text-align: center;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            text-shadow: rgb(124, 130, 185) 4px 4px;
+            font-size: 50px;
+            font-weight: 900;
+        
+        }
+
+        .heading2 {
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: black;
+            font-size: 17px;
+            text-align: center;
+            flex: 20%;
+            justify-content: center;
+            align-items: center;
+         
+        }
+
+
+
+        .life {
+            padding: 30px;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 600;
+            font-family: 'Lato', sans-serif;
+            width: 625px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .susan {
+            padding: 30px;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 600;
+            font-family: 'Lato', sans-serif;
+            width: 625px;
+            margin: auto;
+            text-align: left;
+        }
+
+
+        .quote {
+  margin: 0;
+  background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+ padding: 10px 5px 10px 20px;
+  border-radius: 1em; 
+}
+
+.quote blockquote {
+  margin: 6em 1em 6em 1em;
+  line-height: 2;
+  color: rgb(255, 255, 255);
+  font-family:'Roboto Mono', monospace;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: left;       
+} 
+
+.quote figcaption {
+  color: rgb(255, 255, 255);
+  font-family:'Roboto Mono', monospace;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+}
+
+cite {
+    font-size: 15px;
+}
+
+
+.parallax-3 {
+            width: 100%;
+            height: 100%;
+            background: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Daguerrotype_of_Susan_Dickinson_with_Frame.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+        
+
+        #Information {
+            padding: 15px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: black;
+            font-size: 20px;
+        }
+
+
+        .button {
+  background-color: rgb(56, 56, 121); 
+  border: none;
+  color: white;
+  padding: 5px 7px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  
+}
+
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(56, 56, 121);
+  border-radius: 15px;
+}
+
+.button1:hover {
+  background-color: rgb(56, 56, 121);
+  color: white;
+}
+
+/* YouTube */
+* {
+  box-sizing: border-box;
+}
+
+.you {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.wrapped-iframe {
+  width: 560px;
+  height: 315px;
+  object-fit: cover;
+  padding: 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .wrapped-iframe {
+    width: 315px;
+  height: 180px;
+  object-fit: cover;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .life {
+    font-size: 14px;
+    width: 280px;
+    margin: auto;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .susan {
+    font-size: 14px;
+    width: 280px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .parallax-1 {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .parallax-3 {
+    background-attachment: scroll;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@410&display=swap');
+
+</style>
+
+<!-- HTML -->
+<body>
+    <div class="parallax-1">
+<h1 style="font-size: 50px;">
+    Emily Dickinson
+</h1>
+</div>
+
+<div class="heading2">
+    <h2 id="titles"> About </h2>
+
+    <p class="life"> Emily Dickinson was born on 10th Decemember 1830 in Amherst, U.S.
+        She died on 15th May 1886 in Amherst. 
+        Her sister Lavinia found her books of poetry and began the process of making the poetry public.
+        </p>
+        <p class="life">  The first collection entitled Poems by Emily Dickinson was published in 1890 and was met with praise. 
+        Opinions regarding the poet's talents were mixed in the twentieth century, 
+        but 
+        she is now one of the most important icons in American Poetry despite being unrecognised during her time.
+        Most of her work as a poet was hidden from her family and the surrounding community until after her death in 1886. 
+          Only ten poems out of the 1800 she wrote were published during her lifetime. 
+          The majority of the writing Dickinson completed in the next decade was included in letters. </p>
+          <p class="life"> 
+          Her most popular correspondents were her brother Austin, and a collection of female friends including her sister-in-law Susan Gilbert.
+          In 1858, Dickinson began to organize her massive volumes of poetry into manuscript-books. 
+          Over the course of seven years she compiled about 800 poems into neat bundles. 
+          Her intent with this collection is unknown, but it seems likely she was readying her work to be published posthumously <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank">(Biography of Emily Dickinson)</a></cite>. </p>
+          
+          <p class="life"> During the 1850s, Dickinson's strongest and most affectionate relationship was with her sister-in-law, Susan Gilbert. 
+          Dickinson eventually sent her over three hundred letters, more than to any other correspondent, over the course of their relationship. 
+          Susan was supportive of the poet, playing the role of "most beloved friend, influence, muse, and adviser" whose editorial suggestions Dickinson sometimes followed.
+         In an 1882 letter to Susan, Dickinson said, "With the exception of Shakespeare, you have told me of more knowledge than any one living." <cite><a href="https://en.wikipedia.org/wiki/Emily_Dickinson" target="_blank">(Emily Dickinson)</a></cite>.<br> </p>
+ 
+ 
+          <p class="life"> On one such social gathering Dickinson met Springfield Republican editor and publisher Samuel Bowles. 
+              Bowles was impressed by Dickinson's poetry, and published seven poems during her lifetime. 
+              Dickinson did not give consent for her work to be included, 
+              but more of her poems appeared in the Springfield Republican during her lifetime than in any other publication
+          <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank">(Biography of Emily Dickinson)</a></cite>.  </p>
+
+          <!-- Quote -->
+          <figure class="quote">
+            <blockquote>
+                Do I repine, is it all murmuring, or am I sad and lone, and cannot, 
+                cannot help it? Sometimes when I do feel so, 
+                I think it may be wrong, and that God will punish me by taking you away; 
+                for he is very kind to let me write to you, and to give me your sweet letters, 
+                but my heart wants more. </blockquote>
+                <figcaption>
+                    &mdash; Emily Dickinson </figcaption>
+                    </figure>
+   
+</div>
+
+<div class="parallax-3">
+    <h1 style="font-size: 35px;">
+        Susan Gilbert Dickinson
+    </h1>
+    </div>
+
+
+    <div class="heading2">
+    <h2 class="funfact"> Fun Fact </h2>
+    <p class= "susan"> 
+To most ordinary people, Susan Gilbert was known to be the wife of Austin Dickinson, who was Emily Dickinson's brother. 
+However, there has been evidence that Emily Dickinson's first love and probably her greatest love was Susan Gilbert. </p>
+
+<p class= "susan">"The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced an intense, intimate correspondence that would evolve and permute but would last a life- time. 
+  “We are the only poets,” Emily told Susan, “and everyone else is prose."   <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/" target="_blank">(Emily Dickinson’s Electric Love Letters to Susan Gilbert)</a></cite> </p>
+
+ <!-- Quote -->
+  <figure class="quote">
+    <blockquote>
+        Will you be kind to me, Susie? I am naughty and cross, this morning, and nobody loves me here; nor would you love me, if you should see me frown, and hear how loud the door bangs whenever I go through; and yet it isn’t anger — 
+        I don’t believe it is, for when nobody sees, I brush away big tears with the corner of my apron, and then go working on — bitter tears, Susie — so hot that they burn my cheeks, and almost scorch my eyeballs, but you have wept much, and you know they are less of anger than sorrow. <br>
+      </blockquote>
+      <blockquote>
+        And I do love to run fast — and hide away from them all; here in dear Susie’s bosom, 
+        I know is love and rest, and I never would go away, did not the big world call me, and beat me for not working… 
+        Your precious letter, Susie, 
+        it sits here now, and smiles so kindly at me, and gives me such sweet thoughts of the dear writer. </blockquote>
+        
+        <blockquote>When you come home, darling, 
+        I shan’t have your letters, shall I, but I shall have yourself, which is more — Oh more, and better, than I can even think! I sit here with my little whip, 
+        cracking the time away, till not an hour is left of it — then you are here! And Joy is here — joy now and forevermore! </blockquote>
+        <figcaption>
+            &mdash; Emily Dickinson </figcaption>
+            </figure>
+    </p>
+
+    <!--YouTube -->
+  <div class="you">
+   <iframe class="wrapped-iframe" src="https://www.youtube-nocookie.com/embed/R4WwhOdk_Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+ 
+ <iframe class="wrapped-iframe"  src="https://www.youtube.com/embed/iBMeB6xG4rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+ <iframe class="wrapped-iframe" src="https://www.youtube.com/embed/55kqNg88JqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+<div id="Information" >
+    <form action="https://www.edickinson.org" target="_blank">   Click <button class="button button1" type="submit" >Learn More</button> if you want to know more about Emily Dickinson </form>
+</div>
+
+</body>
+</html>
