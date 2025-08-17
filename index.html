@@ -1,352 +1,400 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Emily Dickinson</title>
-
-   <!-- CSS -->
-
-<style>
-
-* {
-            margin: 0px;
-            padding: 0px;
-            
-}
-
-#titles {
-            text-align: center;
-            position: relative;
-            font-family: 'Lato', sans-serif;
-           font-weight: 900;
-            font-size: 50px;
-            text-shadow: rgb(124, 130, 185) 4px 4px;
+    <title>Emily Dickinson - A Poetic Legacy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-.parallax-1 {
-            width: 100%;
-            height: 100%;
-            background: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_2380,w_4240,x_0,y_528/v1572879978/shape/mentalfloss/606563-flickr-8654989359_72f1559d26_6k.jpg) no-repeat;
+        /* Header Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url(https://images2.minutemediacdn.com/image/upload/c_crop,h_2380,w_4240,x_0,y_528/v1572879978/shape/mentalfloss/606563-flickr-8654989359_72f1559d26_6k.jpg) no-repeat center center;
             background-size: cover;
             background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
-        @media screen and (max-width: 768px) {
-	.parallax-1 {
-		background-attachment: inherit;
-	}
-}
+        .hero-content {
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
 
-        h1 {
-            margin: auto;
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 1px 1px 2px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            opacity: 0.9;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1.5s ease-out 0.3s both;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: left;
+            color: #555;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Quote Styling */
+        .quote-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-container::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.1);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .quote-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .quote-author {
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* Susan Section */
+        .susan-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 4rem 2rem;
+        }
+
+        .susan-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* YouTube Section */
+        .video-section {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            transform: translateY(0) scale(1);
+        }
+
+        .video-container:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.25);
+            border-color: #667eea;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             text-align: center;
-            text-align: center;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Lato', sans-serif;
-            text-shadow: 3px 3px black;
-           
+            padding: 3rem 2rem;
         }
 
-        .funfact {
-            text-align: center;
-            position: relative;
-            font-family: 'Lato', sans-serif;
-            text-shadow: rgb(124, 130, 185) 4px 4px;
-            font-size: 50px;
-            font-weight: 900;
-        
-        }
-
-        .heading2 {
-            padding: 30px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: black;
-            font-size: 17px;
-            text-align: center;
-            flex: 20%;
-            justify-content: center;
-            align-items: center;
-         
-        }
-
-
-
-        .life {
-            padding: 30px;
-            font-size: 20px;
-            line-height: 1.5;
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: 600;
-            font-family: 'Lato', sans-serif;
-            width: 625px;
-            margin: auto;
-            text-align: left;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.25);
         }
 
-        .susan {
-            padding: 30px;
-            font-size: 20px;
-            line-height: 1.5;
-            font-weight: 600;
-            font-family: 'Lato', sans-serif;
-            width: 625px;
-            margin: auto;
-            text-align: left;
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.35);
         }
 
-
-        .quote {
-  margin: 0;
-  background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
- padding: 10px 5px 10px 20px;
-  border-radius: 1em; 
-}
-
-.quote blockquote {
-  margin: 6em 1em 6em 1em;
-  line-height: 2;
-  color: rgb(255, 255, 255);
-  font-family:'Roboto Mono', monospace;
-  font-weight: 900;
-  font-size: 16px;
-  text-align: left;       
-} 
-
-.quote figcaption {
-  color: rgb(255, 255, 255);
-  font-family:'Roboto Mono', monospace;
-  font-weight: 900;
-  font-size: 16px;
-  text-align: center;
-}
-
-cite {
-    font-size: 15px;
-}
-
-
-.parallax-3 {
-            width: 100%;
-            height: 100%;
-            background: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Daguerrotype_of_Susan_Dickinson_with_Frame.jpg) no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-        
-
-        #Information {
-            padding: 15px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: black;
-            font-size: 20px;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
 
-        .button {
-  background-color: rgb(56, 56, 121); 
-  border: none;
-  color: white;
-  padding: 5px 7px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  transition-duration: 0.5s;
-  cursor: pointer;
-  
-}
 
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
 
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid rgb(56, 56, 121);
-  border-radius: 15px;
-}
+        .fade-in:nth-child(2) {
+            animation-delay: 0.2s;
+        }
 
-.button1:hover {
-  background-color: rgb(56, 56, 121);
-  color: white;
-}
+        .fade-in:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
-/* YouTube */
-* {
-  box-sizing: border-box;
-}
+        .fade-in:nth-child(4) {
+            animation-delay: 0.6s;
+        }
 
-.you {
-  position: relative;
-  overflow: hidden;
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+            
+            .content-section,
+            .susan-section,
+            .video-section {
+                padding: 2rem 1rem;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-container {
+                padding: 2rem 1.5rem;
+                margin: 2rem 1rem;
+            }
+        }
 
-}
+        @media screen and (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .content-text {
+                font-size: 1rem;
+            }
+        }
 
-.wrapped-iframe {
-  width: 560px;
-  height: 315px;
-  object-fit: cover;
-  padding: 1%;
-}
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
 
+        /* Selection styling */
+        ::selection {
+            background: rgba(102, 126, 234, 0.3);
+            color: #333;
+        }
+    </style>
+</head>
 
-@media screen and (max-width: 600px) {
-  .wrapped-iframe {
-    width: 315px;
-  height: 180px;
-  object-fit: cover;
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-  .life {
-    font-size: 14px;
-    width: 280px;
-    margin: auto;
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-  .susan {
-    font-size: 14px;
-    width: 280px;
-    margin: auto;
-  }
-}
-
-@media only screen and (max-device-width: 1000px) {
-  .parallax-1 {
-    background-attachment: scroll;
-  }
-}
-
-@media only screen and (max-device-width: 1000px) {
-  .parallax-3 {
-    background-attachment: scroll;
-  }
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@410&display=swap');
-
-</style>
-
-<!-- HTML -->
 <body>
-    <div class="parallax-1">
-<h1 style="font-size: 50px;">
-    Emily Dickinson
-</h1>
-</div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Emily Dickinson</h1>
+            <p class="hero-subtitle">Poet of the Soul</p>
+        </div>
+    </section>
 
-<div class="heading2">
-    <h2 id="titles"> About </h2>
-
-    <p class="life"> Emily Dickinson was born on 10th Decemember 1830 in Amherst, U.S.
-        She died on 15th May 1886 in Amherst. 
-        Her sister Lavinia found her books of poetry and began the process of making the poetry public.
-        </p>
-        <p class="life">  The first collection entitled Poems by Emily Dickinson was published in 1890 and was met with praise. 
-        Opinions regarding the poet's talents were mixed in the twentieth century, 
-        but 
-        she is now one of the most important icons in American Poetry despite being unrecognised during her time.
-        Most of her work as a poet was hidden from her family and the surrounding community until after her death in 1886. 
-          Only ten poems out of the 1800 she wrote were published during her lifetime. 
-          The majority of the writing Dickinson completed in the next decade was included in letters. </p>
-          <p class="life"> 
-          Her most popular correspondents were her brother Austin, and a collection of female friends including her sister-in-law Susan Gilbert.
-          In 1858, Dickinson began to organize her massive volumes of poetry into manuscript-books. 
-          Over the course of seven years she compiled about 800 poems into neat bundles. 
-          Her intent with this collection is unknown, but it seems likely she was readying her work to be published posthumously <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank">(Biography of Emily Dickinson)</a></cite>. </p>
-          
-          <p class="life"> During the 1850s, Dickinson's strongest and most affectionate relationship was with her sister-in-law, Susan Gilbert. 
-          Dickinson eventually sent her over three hundred letters, more than to any other correspondent, over the course of their relationship. 
-          Susan was supportive of the poet, playing the role of "most beloved friend, influence, muse, and adviser" whose editorial suggestions Dickinson sometimes followed.
-         In an 1882 letter to Susan, Dickinson said, "With the exception of Shakespeare, you have told me of more knowledge than any one living." <cite><a href="https://en.wikipedia.org/wiki/Emily_Dickinson" target="_blank">(Emily Dickinson)</a></cite>.<br> </p>
- 
- 
-          <p class="life"> On one such social gathering Dickinson met Springfield Republican editor and publisher Samuel Bowles. 
-              Bowles was impressed by Dickinson's poetry, and published seven poems during her lifetime. 
-              Dickinson did not give consent for her work to be included, 
-              but more of her poems appeared in the Springfield Republican during her lifetime than in any other publication
-          <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank">(Biography of Emily Dickinson)</a></cite>.  </p>
-
-          <!-- Quote -->
-          <figure class="quote">
-            <blockquote>
-                Do I repine, is it all murmuring, or am I sad and lone, and cannot, 
-                cannot help it? Sometimes when I do feel so, 
-                I think it may be wrong, and that God will punish me by taking you away; 
-                for he is very kind to let me write to you, and to give me your sweet letters, 
-                but my heart wants more. </blockquote>
-                <figcaption>
-                    &mdash; Emily Dickinson </figcaption>
-                    </figure>
-   
-</div>
-
-<div class="parallax-3">
-    <h1 style="font-size: 35px;">
-        Susan Gilbert Dickinson
-    </h1>
-    </div>
-
-
-    <div class="heading2">
-    <h2 class="funfact"> Fun Fact </h2>
-    <p class= "susan"> 
-To most ordinary people, Susan Gilbert was known to be the wife of Austin Dickinson, who was Emily Dickinson's brother. 
-However, there has been evidence that Emily Dickinson's first love and probably her greatest love was Susan Gilbert. </p>
-
-<p class= "susan">"The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced an intense, intimate correspondence that would evolve and permute but would last a life- time. 
-  “We are the only poets,” Emily told Susan, “and everyone else is prose."   <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/" target="_blank">(Emily Dickinson’s Electric Love Letters to Susan Gilbert)</a></cite> </p>
-
- <!-- Quote -->
-  <figure class="quote">
-    <blockquote>
-        Will you be kind to me, Susie? I am naughty and cross, this morning, and nobody loves me here; nor would you love me, if you should see me frown, and hear how loud the door bangs whenever I go through; and yet it isn’t anger — 
-        I don’t believe it is, for when nobody sees, I brush away big tears with the corner of my apron, and then go working on — bitter tears, Susie — so hot that they burn my cheeks, and almost scorch my eyeballs, but you have wept much, and you know they are less of anger than sorrow. <br>
-      </blockquote>
-      <blockquote>
-        And I do love to run fast — and hide away from them all; here in dear Susie’s bosom, 
-        I know is love and rest, and I never would go away, did not the big world call me, and beat me for not working… 
-        Your precious letter, Susie, 
-        it sits here now, and smiles so kindly at me, and gives me such sweet thoughts of the dear writer. </blockquote>
+    <!-- About Section -->
+    <section class="content-section">
+        <h2 class="section-title">About</h2>
         
-        <blockquote>When you come home, darling, 
-        I shan’t have your letters, shall I, but I shall have yourself, which is more — Oh more, and better, than I can even think! I sit here with my little whip, 
-        cracking the time away, till not an hour is left of it — then you are here! And Joy is here — joy now and forevermore! </blockquote>
-        <figcaption>
-            &mdash; Emily Dickinson </figcaption>
-            </figure>
-    </p>
+        <p class="content-text fade-in">
+            Emily Dickinson was born on 10th December 1830 in Amherst, U.S. She died on 15th May 1886 in Amherst. 
+            Her sister Lavinia found her books of poetry and began the process of making the poetry public.
+        </p>
+        
+        <p class="content-text fade-in">
+            The first collection entitled Poems by Emily Dickinson was published in 1890 and was met with praise. 
+            Opinions regarding the poet's talents were mixed in the twentieth century, but she is now one of the most 
+            important icons in American Poetry despite being unrecognised during her time. Most of her work as a poet 
+            was hidden from her family and the surrounding community until after her death in 1886. Only ten poems 
+            out of the 1800 she wrote were published during her lifetime.
+        </p>
+        
+        <p class="content-text fade-in">
+            Her most popular correspondents were her brother Austin, and a collection of female friends including 
+            her sister-in-law Susan Gilbert. In 1858, Dickinson began to organize her massive volumes of poetry 
+            into manuscript-books. Over the course of seven years she compiled about 800 poems into neat bundles. 
+            Her intent with this collection is unknown, but it seems likely she was readying her work to be published 
+            posthumously <cite><a href="https://www.emilydickinson.net/biography.jsp" target="_blank" style="color: #667eea; text-decoration: none;">(Biography of Emily Dickinson)</a></cite>.
+        </p>
 
-    <!--YouTube -->
-  <div class="you">
-   <iframe class="wrapped-iframe" src="https://www.youtube-nocookie.com/embed/R4WwhOdk_Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- 
- 
- <iframe class="wrapped-iframe"  src="https://www.youtube.com/embed/iBMeB6xG4rE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Quote -->
+        <div class="quote-container fade-in">
+            <blockquote class="quote-text">
+                Do I repine, is it all murmuring, or am I sad and lone, and cannot, cannot help it? Sometimes when I do feel so, 
+                I think it may be wrong, and that God will punish me by taking you away; for he is very kind to let me write to you, 
+                and to give me your sweet letters, but my heart wants more.
+            </blockquote>
+            <p class="quote-author">— Emily Dickinson</p>
+        </div>
+    </section>
 
+    <!-- Susan Gilbert Section -->
+    <section class="susan-section">
+        <div class="susan-content">
+            <h2 class="section-title">Susan Gilbert Dickinson</h2>
+            
+            <p class="content-text fade-in">
+                To most ordinary people, Susan Gilbert was known to be the wife of Austin Dickinson, who was Emily Dickinson's brother. 
+                However, there has been evidence that Emily Dickinson's first love and probably her greatest love was Susan Gilbert.
+            </p>
+            
+            <p class="content-text fade-in">
+                "The two young women took long walks in the woods together, exchanged books, read poetry to each other, and commenced 
+                an intense, intimate correspondence that would evolve and permute but would last a lifetime. 'We are the only poets,' 
+                Emily told Susan, 'and everyone else is prose.'" 
+                <cite><a href="https://www.themarginalian.org/2018/12/10/emily-dickinson-love-letters-susan-gilbert/" target="_blank" style="color: #667eea; text-decoration: none;">(Emily Dickinson's Electric Love Letters to Susan Gilbert)</a></cite>
+            </p>
 
- <iframe class="wrapped-iframe" src="https://www.youtube.com/embed/55kqNg88JqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Quote -->
+            <div class="quote-container fade-in">
+                <blockquote class="quote-text">
+                    Will you be kind to me, Susie? I am naughty and cross, this morning, and nobody loves me here; nor would you love me, 
+                    if you should see me frown, and hear how loud the door bangs whenever I go through; and yet it isn't anger — I don't believe 
+                    it is, for when nobody sees, I brush away big tears with the corner of my apron, and then go working on — bitter tears, Susie — 
+                    so hot that they burn my cheeks, and almost scorch my eyeballs, but you have wept much, and you know they are less of anger than sorrow.
+                </blockquote>
+                <p class="quote-author">— Emily Dickinson</p>
+            </div>
+        </div>
+    </section>
 
-</div>
-<div id="Information" >
-    <form action="https://www.edickinson.org" target="_blank">   Click <button class="button button1" type="submit" >Learn More</button> if you want to know more about Emily Dickinson </form>
-</div>
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2 class="section-title">Learn More</h2>
+        <div class="video-grid">
+            <div class="video-container fade-in">
+                <iframe src="https://www.youtube-nocookie.com/embed/R4WwhOdk_Eg" title="Emily Dickinson Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container fade-in">
+                <iframe src="https://www.youtube.com/embed/iBMeB6xG4rE" title="Emily Dickinson Poetry Reading" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-container fade-in">
+                <iframe src="https://www.youtube.com/embed/55kqNg88JqI" title="Emily Dickinson Biography" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="section-title" style="color: white;">Discover More</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.2rem; opacity: 0.9;">
+            Explore the fascinating world of Emily Dickinson's poetry and life
+        </p>
+        <a href="https://www.edickinson.org" target="_blank" class="cta-button">Learn More</a>
+    </section>
+
 
 </body>
 </html>
